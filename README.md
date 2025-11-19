@@ -6,7 +6,7 @@ An AI-powered kung fu/martial arts training application using YOLO models for po
 
 ![Python](https://img.shields.io/badge/Python-3.12+-blue.svg)
 ![PyQt6](https://img.shields.io/badge/PyQt6-6.10+-green.svg)
-![YOLO](https://img.shields.io/badge/YOLO-v8-red.svg)
+![YOLO](https://img.shields.io/badge/YOLO-v12-red.svg)
 
 ## ✨ 特色功能 (Features)
 
@@ -36,7 +36,7 @@ An AI-powered kung fu/martial arts training application using YOLO models for po
 ## 🛠️ 技術架構 (Tech Stack)
 
 - **前端框架**: PyQt6 - 現代化的 GUI 介面
-- **深度學習**: Ultralytics YOLO (YOLOv8) - 高精度姿態檢測
+- **深度學習**: Ultralytics YOLO (YOLOv12) - 高精度姿態檢測
 - **姿態檢測**: 自訓練的姿態和手部模型
 - **相似度計算**: FastDTW + 歐幾里得距離
 - **影像處理**: OpenCV, NumPy, Pillow
@@ -435,11 +435,11 @@ pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
 
 ### 模型量化
 
-使用較小的 YOLO 模型（如 YOLOv8n）以提升速度:
+使用較小的 YOLO 模型（如 YOLOn）以提升速度:
 
 ```python
 # helper/model.py
-pose_model = ModelLoader("./model/yolov8n-pose.pt")  # n=nano, s=small, m=medium
+pose_model = ModelLoader("./model/yolov12n-pose.pt")  # n=nano, s=small, m=medium
 ```
 
 ### 影片解析度
@@ -465,7 +465,7 @@ self.predict = self.model.predict(
 
 - Python 3.12+
 - PyQt6
-- Ultralytics YOLOv8
+- Ultralytics YOLOv12
 
 **貢獻者 (Contributors):**
 
@@ -493,7 +493,7 @@ self.predict = self.model.predict(
    from ultralytics import YOLO
 
    # 載入預訓練模型
-   model = YOLO('yolov8n-pose.pt')
+   model = YOLO('yolov12n-pose.pt')
 
    # 開始訓練
    results = model.train(
