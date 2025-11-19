@@ -109,7 +109,7 @@ model/
 ### 4. 執行應用程式 (Run the application)
 
 ```bash
-python main.py
+uv run main.py
 ```
 
 ## 📁 專案結構 (Project Structure)
@@ -322,13 +322,8 @@ VALUES (120, 85, './result/predict/student-456.avi');
 
 ### 開發依賴 (Dev Dependencies)
 
-```toml
-[dependency-groups]
-dev = [
-    "ipykernel>=7.1.0",      # Jupyter notebook 支援
-    "pyqt5==5.15.11",        # PyQt5 相容性測試
-    "pyqt5-qt5==5.15.2",     # PyQt5 Qt 版本
-]
+```
+uv sync
 ```
 
 ## ⚙️ 配置說明 (Configuration)

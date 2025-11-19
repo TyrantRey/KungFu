@@ -15,10 +15,3 @@ dependencies = [
     "scipy>=1.16.3",
     "ultralytics>=8.3.227",
 ]
-
-[dependency-groups]
-dev = [
-    "ipykernel>=7.1.0",
-    "pyqt5==5.15.11",
-    "pyqt5-qt5==5.15.2",
-]
